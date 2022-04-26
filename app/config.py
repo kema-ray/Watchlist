@@ -1,4 +1,4 @@
-from instance.config import MOVIE_API_KEY
+#  from instance.config import MOVIE_API_KEY
 
 
 class Config:
@@ -6,7 +6,7 @@ class Config:
     General configuration parent class
     '''
     MOVIE_API_BASE_URL='https://api.themoviedb.org/3/movie/{}?api_key={}'
-    pass
+
 class ProdConfig(Config):
     '''
     Production  configuration child class
