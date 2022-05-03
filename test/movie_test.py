@@ -1,8 +1,8 @@
 import unittest
 
-from app.models import movie
+from app.models import Movie
 # from models import movie
-Movie = movie.Movie
+# Movie = movie.Movie
 
 class MovieTest(unittest.TestCase):
     '''
@@ -23,5 +23,5 @@ class MovieTest(unittest.TestCase):
     #     self.assertEqual(self.new_movie.poster,'https://image.tmdb.org/t/p/w500/khsjha27hbs')
     #     self.assertEqual(self.new_movie.vote_average,8.5)
     #     self.assertEqual(self.new_movie.vote_count,129993)
-if __name__=='__main__':
-    unittest.main()    
+# if __name__=='__main__':
+#     unittest.main()    
