@@ -1,7 +1,7 @@
 from flask import redirect, render_template, request, url_for
-from app import app
+# from app import app
 from . import main
-from app.main.forms import ReviewFom #from app import rachel
+from .forms import ReviewForm #from app import rachel
 from ..request import get_movies,get_movie,search_movie
 from ..models import Review
 
@@ -47,7 +47,7 @@ def search(movie_name):
 
 @main.route('/movie/review/new/<int:id>',methods = ['GET','POST'])
 def new_review(id):
-    form = ReviewFom()
+    form = ReviewForm()
     movie = get_movie(id)
 
     if form.validate_on_submit():

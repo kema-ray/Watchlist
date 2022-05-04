@@ -8,6 +8,7 @@ class Config:
     MOVIE_API_BASE_URL='https://api.themoviedb.org/3/movie/{}?api_key={}'
     MOVIE_API_KEY = os.environ.get('MOVIE_API_KEY')
     SECRET_KEY = os.environ.get('SECRET_KEY')
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://rachel:hotspurs@localhost/watchlist'
 #os.environ.get function to get SECRET_KEY and MOVIE_API_KEY which we will set as environment variables.
 class ProdConfig(Config):
     '''
@@ -27,6 +28,6 @@ class DevConfig(Config):
     DEBUG = True
 
 config_options = { #is a dictionaryto help us to access different configuration option classes.
-    'development':DevConfig,
-    'production':ProdConfig
+'development':DevConfig,
+'production':ProdConfig
 }
