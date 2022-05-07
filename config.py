@@ -9,6 +9,7 @@ class Config:
     MOVIE_API_KEY = os.environ.get('MOVIE_API_KEY')
     SECRET_KEY = os.environ.get('SECRET_KEY')
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:hotspurs@localhost/watchlist'
+    UPLOADED_PHOTOS_DEST = 'app/static/photos'
 #os.environ.get function to get SECRET_KEY and MOVIE_API_KEY which we will set as environment variables.
 class ProdConfig(Config):
     '''
